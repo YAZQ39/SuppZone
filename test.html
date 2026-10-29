@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+    <title>Home | SuppZone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: Inter, sans-serif; }
+        summary { list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        .mega-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: .2s ease; }
+        .category-menu:hover .mega-menu,
+        .category-menu[open] .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .category-menu:hover .menu-arrow,
+        .category-menu[open] .menu-arrow { transform: rotate(180deg); }
+        .collection-card img { transition: transform .6s ease; }
+        .collection-card:hover img { transform: scale(1.08); }
+        .product-card { transition: .2s ease; }
+        .product-card:hover { border-color: #8da92b; transform: translateY(-3px); }
+        .product-image img { transition: transform .4s ease; }
+        .product-card:hover .product-image img { transform: scale(1.06); }
+        @media (max-width: 700px) {
+            .mega-menu { display: none; }
+        }
+    </style>
+    
+</head>
+
+<body class="bg-[#101214] text-white">
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-50 border-b border-[#30363b] bg-[#101214]/95 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-7">
+
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight shrink-0">
+                Supp<span class="text-[#c6f135]">Zone</span>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-6 flex-1 text-sm font-semibold">
+                <a href="index.html" class="text-[#c6f135]">Home</a>
+                <a href="shop.html" class="text-[#a0a5ac] hover:text-[#c6f135]">Shop</a>
+
+                <!-- Categories Mega Menu: opens on hover or click, no JavaScript -->
+                <details class="category-menu relative h-full">
+                    <summary class="cursor-pointer text-[#c6f135] py-2 flex items-center gap-1">
+                        Categories <span class="menu-arrow inline-block transition-transform">⌄</span>
+                    </summary>
+
+                    <div class="mega-menu absolute top-10 left-[-130px] w-[760px] max-w-[calc(100vw-40px)] rounded-2xl border border-[#30363b] bg-[#1c2024] p-5 shadow-2xl">
+                        <div class="mb-4">
+                            <p class="text-[#c6f135] text-[10px] font-extrabold tracking-[2px]">EXPLORE SUPPZONE</p>
+                            <h3 class="text-xl font-bold mt-1">Find your collection</h3>
+                        </div>
+
+                        <div class="grid grid-cols-4 gap-3">
+                            <a href="vitamins.html" class="overflow-hidden rounded-xl border border-[#30363b] bg-[#15191d] hover:border-[#c6f135] transition">
+                                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=520&q=80" alt="Vitamins" class="w-full h-24 object-cover">
+                                <div class="p-3">
+                                    <h4 class="text-xs font-bold">Vitamins</h4>
+                                    <p class="text-[#747b84] text-[10px] mt-1">A dedicated vitamins collection</p>
+                                </div>
+                            </a>
+
+                            <a href="supplements.html" class="overflow-hidden rounded-xl border border-[#30363b] bg-[#15191d] hover:border-[#c6f135] transition">
+                                <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=520&q=80" alt="Supplements" class="w-full h-24 object-cover">
+                                <div class="p-3">
+                                    <h4 class="text-xs font-bold">Supplements</h4>
+                                    <p class="text-[#747b84] text-[10px] mt-1">Sports nutrition catalog</p>
+                                </div>
+                            </a>
+
+                            <a href="sportswear-equipment.html" class="overflow-hidden rounded-xl border border-[#30363b] bg-[#15191d] hover:border-[#c6f135] transition">
+                                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=520&q=80" alt="Sportswear" class="w-full h-24 object-cover">
+                                <div class="p-3">
+                                    <h4 class="text-xs font-bold">Sportswear</h4>
+                                    <p class="text-[#747b84] text-[10px] mt-1">Clothing for training</p>
+                                </div>
+                            </a>
+
+                            <a href="equipment.html" class="overflow-hidden rounded-xl border border-[#30363b] bg-[#15191d] hover:border-[#c6f135] transition">
+                                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=520&q=80" alt="Equipment" class="w-full h-24 object-cover">
+                                <div class="p-3">
+                                    <h4 class="text-xs font-bold">Equipment</h4>
+                                    <p class="text-[#747b84] text-[10px] mt-1">Training and gym gear</p>
+                                </div>
+                            </a>
+
+                            <a href="accessories.html" class="overflow-hidden rounded-xl border border-[#30363b] bg-[#15191d] hover:border-[#c6f135] transition">
+                                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=520&q=80" alt="Accessories" class="w-full h-24 object-cover">
+                                <div class="p-3">
+                                    <h4 class="text-xs font-bold">Accessories</h4>
+                                    <p class="text-[#747b84] text-[10px] mt-1">Bottles, bags and essentials</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </nav>
+
+            <!-- Header Actions (visual only) -->
+            <div class="flex items-center gap-2 ml-auto text-sm">
+                <a href="wishlist.html" class="rounded-lg border border-[#30363b] bg-[#1c2024] px-3 py-2 hover:border-[#c6f135]">♡ <b class="text-[#c6f135]">0</b></a>
+                <a href="cart.html" class="rounded-lg border border-[#30363b] bg-[#1c2024] px-3 py-2 hover:border-[#c6f135]">🛒 <b class="text-[#c6f135]">0</b></a>
+                <a href="#" class="hidden sm:block rounded-lg border border-[#30363b] bg-[#1c2024] px-3 py-2 hover:border-[#c6f135]">☼</a>
+                <a href="auth.html" class="rounded-lg border border-[#30363b] bg-[#1c2024] px-3 py-2 text-xs hover:border-[#c6f135]">Account</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="max-w-6xl mx-auto px-6 pt-6 pb-16">
+
+        <!-- HERO SECTION -->
+        <section class="grid md:grid-cols-[1.1fr_.9fr] gap-8 items-center rounded-2xl border border-[#30363b] bg-gradient-to-r from-[#15191d] to-[#1c2024] p-8 md:p-10 overflow-hidden">
+            <div>
+                <p class="text-[#c6f135] text-[10px] font-extrabold tracking-[2px]">WELCOME TO SUPPZONE</p>
+                <h1 class="text-4xl md:text-5xl leading-[1.08] tracking-tight font-semibold mt-4 mb-4">
+                    Everything for <span class="text-[#c6f135]">your active life</span>
+                </h1>
+                <p class="text-[#a0a5ac] text-sm leading-7 max-w-lg">
+                    Browse a better-organized catalog with separate collections for vitamins, sports nutrition, clothing and fitness essentials.
+                </p>
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <a href="shop.html" class="bg-[#c6f135] text-[#101214] rounded-lg px-4 py-3 text-xs font-bold hover:brightness-95">Shop Now</a>
+                    <a href="#categories" class="border border-[#30363b] rounded-lg px-4 py-3 text-xs font-bold hover:border-[#c6f135]">Explore Categories</a>
+                </div>
+            </div>
+
+            <div class="relative min-h-[260px] overflow-hidden rounded-2xl bg-[#252b30]">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=85" alt="Modern fitness training space" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-br from-black/10 to-black/50"></div>
+                <p class="absolute bottom-5 left-5 text-white text-[11px] font-extrabold tracking-[2px]">MOVE WITH PURPOSE</p>
+            </div>
+        </section>
+
+
+        <!-- CATEGORY COLLECTIONS -->
+        <section id="categories" class="mt-10">
+            <div class="flex justify-between items-end gap-5 mb-5">
+                <div>
+                    <p class="text-[#c6f135] text-[10px] font-extrabold tracking-[2px]">BROWSE COLLECTIONS</p>
+                    <h2 class="text-2xl font-semibold mt-1">Explore by category</h2>
+                </div>
+                <p class="text-[#a0a5ac] text-xs">Four clear departments</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Vitamins -->
+                <a href="vitamins.html" class="collection-card relative min-h-[275px] rounded-2xl overflow-hidden border border-[#30363b]">
+                    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=900&q=85" alt="Vitamins collection" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5">
+                        <p class="text-[#c6f135] text-[9px] font-extrabold tracking-[1.6px]">WELLNESS</p>
+                        <h3 class="text-xl font-bold mt-1">Vitamins</h3>
+                        <p class="text-white/80 text-[11px] mt-1">A separate, easy-to-browse collection</p>
+                        <p class="text-[#c6f135] text-[11px] font-bold mt-4">Explore collection ↗</p>
+                    </div>
+                </a>
+
+                <!-- Supplements -->
+                <a href="supplements.html" class="collection-card relative min-h-[275px] rounded-2xl overflow-hidden border border-[#30363b]">
+                    <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=900&q=85" alt="Supplements collection" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5">
+                        <p class="text-[#c6f135] text-[9px] font-extrabold tracking-[1.6px]">SPORTS NUTRITION</p>
+                        <h3 class="text-xl font-bold mt-1">Supplements</h3>
+                        <p class="text-white/80 text-[11px] mt-1">Sports nutrition product examples</p>
+                        <p class="text-[#c6f135] text-[11px] font-bold mt-4">Explore collection ↗</p>
+                    </div>
+                </a>
+
+                <!-- Sportswear -->
+                <a href="sportswear-equipment.html" class="collection-card relative min-h-[275px] rounded-2xl overflow-hidden border border-[#30363b]">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=85" alt="Sportswear collection" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5">
+                        <p class="text-[#c6f135] text-[9px] font-extrabold tracking-[1.6px]">APPAREL</p>
+                        <h3 class="text-xl font-bold mt-1">Sportswear</h3>
+                        <p class="text-white/80 text-[11px] mt-1">Training clothes and everyday activewear</p>
+                        <p class="text-[#c6f135] text-[11px] font-bold mt-4">Explore collection ↗</p>
+                    </div>
+                </a>
+
+                <!-- Equipment -->
+                <a href="equipment.html" class="collection-card relative min-h-[275px] rounded-2xl overflow-hidden border border-[#30363b]">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=900&q=85" alt="Equipment collection" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5">
+                        <p class="text-[#c6f135] text-[9px] font-extrabold tracking-[1.6px]">TRAINING GEAR</p>
+                        <h3 class="text-xl font-bold mt-1">Equipment</h3>
+                        <p class="text-white/80 text-[11px] mt-1">Training and gym gear</p>
+                        <p class="text-[#c6f135] text-[11px] font-bold mt-4">Explore collection ↗</p>
+                    </div>
+                </a>
+
+                <!-- Accessories -->
+                <a href="accessories.html" class="collection-card relative min-h-[275px] rounded-2xl overflow-hidden border border-[#30363b]">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=85" alt="Accessories collection" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5">
+                        <p class="text-[#c6f135] text-[9px] font-extrabold tracking-[1.6px]">ACCESSORIES</p>
+                        <h3 class="text-xl font-bold mt-1">Accessories</h3>
+                        <p class="text-white/80 text-[11px] mt-1">Bottles, bags and daily essentials</p>
+                        <p class="text-[#c6f135] text-[11px] font-bold mt-4">Explore collection ↗</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- BEST SELLERS -->
+        <section id="shop" class="mt-12">
+            <div class="flex justify-between items-end mb-5">
+                <div>
+                    <p class="text-[#c6f135] text-[10px] font-extrabold tracking-[2px]">POPULAR PICKS</p>
+                    <h2 class="text-2xl font-semibold mt-1">Best sellers</h2>
+                </div>
+                <a href="shop.html" class="border border-[#30363b] rounded-lg px-4 py-2 text-xs font-bold hover:border-[#c6f135]">View all</a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Product 1 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <span class="absolute top-3 left-3 bg-[#c6f135] text-[#101214] text-[10px] font-extrabold rounded-full px-2 py-1">SALE</span>
+                        <img src="https://cdn.shopify.com/s/files/1/2640/1510/products/Premium-Protein-Chocolate-Gorilla-Mode-30srv.png?v=1727213574&width=700" alt="Whey Protein 2kg" class="w-full h-full object-contain p-3">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">Optimum Nutrition</p>
+                        <h3 class="text-sm font-bold mt-1">Whey Protein 2kg</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.8</span> <span class="text-[#747b84]">(126)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Supplements</p>
+                        <p class="font-extrabold mt-2">₪249 <del class="text-[#747b84] text-xs font-normal ml-1">₪289</del></p>
+                        <div class="flex gap-2 mt-3">
+                            <a href="product.html?id=p1" class="bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 px-2 text-[11px] font-bold flex-1">🛒 Add to Cart</a>
+                            <a href="compare.html" class="border border-[#30363b] rounded-lg py-2 px-2 text-center text-xs flex-1">⇄</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <img src="https://isupps.co.nz/cdn/shop/products/MP-PROTEIN-Cookies_800x.jpg?v=1599868162" alt="Creatine Monohydrate" class="w-full h-full object-contain p-3">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">Applied Nutrition</p>
+                        <h3 class="text-sm font-bold mt-1">Creatine Monohydrate</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.7</span> <span class="text-[#747b84]">(84)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Supplements</p>
+                        <p class="font-extrabold mt-2">₪119</p>
+                        <div class="flex gap-2 mt-3">
+                            <a href="product.html?id=p2" class="bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 px-2 text-[11px] font-bold flex-1">🛒 Add to Cart</a>
+                            <a href="compare.html" class="border border-[#30363b] rounded-lg py-2 px-2 text-center text-xs flex-1">⇄</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=900&q=85" alt="Adjustable Dumbbell" class="w-full h-full object-cover p-3">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">Fitness Gear</p>
+                        <h3 class="text-sm font-bold mt-1">Adjustable Dumbbell</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.7</span> <span class="text-[#747b84]">(19)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Equipment</p>
+                        <p class="font-extrabold mt-2">₪299</p>
+                        <div class="flex gap-2 mt-3">
+                            <a href="product.html?id=p6" class="bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 px-2 text-[11px] font-bold flex-1">🛒 Add to Cart</a>
+                            <a href="compare.html" class="border border-[#30363b] rounded-lg py-2 px-2 text-center text-xs flex-1">⇄</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=900&q=85" alt="Premium Shaker" class="w-full h-full object-contain p-3 bg-white">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">SuppZone</p>
+                        <h3 class="text-sm font-bold mt-1">Premium Shaker</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.8</span> <span class="text-[#747b84]">(101)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Accessories</p>
+                        <p class="font-extrabold mt-2">₪35</p>
+                        <div class="flex gap-2 mt-3">
+                            <a href="product.html?id=p8" class="bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 px-2 text-[11px] font-bold flex-1">🛒 Add to Cart</a>
+                            <a href="compare.html" class="border border-[#30363b] rounded-lg py-2 px-2 text-center text-xs flex-1">⇄</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- FEATURED PRODUCTS -->
+        <section class="mt-12">
+            <div class="mb-5">
+                <p class="text-[#c6f135] text-[10px] font-extrabold tracking-[2px]">HAND-PICKED</p>
+                <h2 class="text-2xl font-semibold mt-1">Featured products</h2>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Featured Product 1 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <span class="absolute top-3 left-3 bg-[#c6f135] text-[#101214] text-[10px] font-extrabold rounded-full px-2 py-1">SALE</span>
+                        <img src="https://cdn.shopify.com/s/files/1/2640/1510/products/Premium-Protein-Chocolate-Gorilla-Mode-30srv.png?v=1727213574&width=700" alt="Whey Protein 2kg" class="w-full h-full object-contain p-3">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">Optimum Nutrition</p>
+                        <h3 class="text-sm font-bold mt-1">Whey Protein 2kg</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.8</span> <span class="text-[#747b84]">(126)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Supplements</p>
+                        <p class="font-extrabold mt-2">₪249 <del class="text-[#747b84] text-xs font-normal ml-1">₪289</del></p>
+                        <a href="product.html?id=p1" class="block bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 mt-3 text-[11px] font-bold">🛒 Add to Cart</a>
+                    </div>
+                </article>
+
+                <!-- Featured Product 2 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <img src="https://isupps.co.nz/cdn/shop/products/MP-PROTEIN-Cookies_800x.jpg?v=1599868162" alt="Creatine Monohydrate" class="w-full h-full object-contain p-3">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">Applied Nutrition</p>
+                        <h3 class="text-sm font-bold mt-1">Creatine Monohydrate</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.7</span> <span class="text-[#747b84]">(84)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Supplements</p>
+                        <p class="font-extrabold mt-2">₪119</p>
+                        <a href="product.html?id=p2" class="block bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 mt-3 text-[11px] font-bold">🛒 Add to Cart</a>
+                    </div>
+                </article>
+
+                <!-- Featured Product 3 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <img src="https://www.givorypeople.com/cdn/shop/files/95df5f83-76d4-4b03-a02a-df66b15f4063.jpg?v=1762433523" alt="Hydration Electrolytes" class="w-full h-full object-contain p-3">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">Nuun</p>
+                        <h3 class="text-sm font-bold mt-1">Hydration Electrolytes</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.4</span> <span class="text-[#747b84]">(31)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Supplements</p>
+                        <p class="font-extrabold mt-2">₪69</p>
+                        <a href="product.html?id=p4" class="block bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 mt-3 text-[11px] font-bold">🛒 Add to Cart</a>
+                    </div>
+                </article>
+
+                <!-- Featured Product 4 -->
+                <article class="product-card bg-[#1c2024] border border-[#30363b] rounded-xl overflow-hidden">
+                    <div class="product-image h-44 bg-[#252b30] relative flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=85" alt="Training T-Shirt" class="w-full h-full object-cover p-3">
+                        <button class="absolute top-3 right-3 bg-[#1c2024] border border-[#30363b] rounded-full w-7 h-7">♡</button>
+                    </div>
+                    <div class="p-3 border-t border-[#30363b]">
+                        <p class="text-[#747b84] text-[9px] uppercase tracking-wide">Under Armour</p>
+                        <h3 class="text-sm font-bold mt-1">Training T-Shirt</h3>
+                        <p class="text-yellow-400 text-xs mt-3">★★★★★ <span class="text-white">4.6</span> <span class="text-[#747b84]">(42)</span></p>
+                        <p class="text-[#747b84] text-[10px] mt-3">Sportswear</p>
+                        <p class="font-extrabold mt-2">₪89</p>
+                        <a href="product.html?id=p5" class="block bg-[#c6f135] text-[#101214] text-center rounded-lg py-2 mt-3 text-[11px] font-bold">🛒 Add to Cart</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- WHY SUPPZONE -->
+        <section class="mt-8 rounded-xl border border-[#30363b] bg-[#1c2024] p-5">
+            <p class="text-[#c6f135] text-[10px] font-extrabold tracking-[2px]">WHY SUPPZONE</p>
+            <h2 class="text-lg mt-1">A cleaner way to explore the catalog</h2>
+
+            <div class="grid md:grid-cols-3 gap-3 mt-3">
+                <div class="bg-[#15191d] border border-[#30363b] rounded-xl p-4">
+                    <p class="text-sm">Separate departments</p>
+                    <strong class="block text-xl mt-2">4</strong>
+                </div>
+                <div class="bg-[#15191d] border border-[#30363b] rounded-xl p-4">
+                    <p class="text-sm">Demo product range</p>
+                    <strong class="block text-xl mt-2">20 items</strong>
+                </div>
+                <div class="bg-[#15191d] border border-[#30363b] rounded-xl p-4">
+                    <p class="text-sm">Shopping tools</p>
+                    <strong class="block text-xl mt-2">3 useful lists</strong>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- NEWSLETTER -->
+        <section class="mt-7 mb-16 rounded-xl border border-[#30363b] bg-[#1c2024] p-5">
+            <h2 class="text-sm font-bold">Join the SuppZone newsletter</h2>
+            <p class="text-[#a0a5ac] text-xs mt-1">Get occasional store updates in this demo experience.</p>
+            <form class="grid md:grid-cols-2 gap-2 mt-4">
+                <input type="email" placeholder="Your email address" class="w-full rounded-lg border border-[#30363b] bg-[#15191d] px-4 py-3 text-sm outline-none focus:border-[#c6f135]">
+                <button type="button" class="rounded-lg bg-[#c6f135] text-[#101214] py-3 text-xs font-bold">Subscribe</button>
+            </form>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-[#30363b] bg-[#15191d] px-6 py-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <div class="col-span-2 md:col-span-1">
+                <h3 class="font-bold text-sm">Supp<span class="text-[#c6f135]">Zone</span></h3>
+                <p class="text-[#a0a5ac] text-xs leading-6 mt-3">
+                    A demonstration sports nutrition and fitness store built as a university project. Product details and transactions are illustrative.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-xs mb-4">Explore</h4>
+                <ul class="space-y-3 text-[#a0a5ac] text-xs">
+                    <li><a href="shop.html" class="hover:text-[#c6f135]">Shop all</a></li>
+                    <li><a href="vitamins.html" class="hover:text-[#c6f135]">Vitamins</a></li>
+                    <li><a href="supplements.html" class="hover:text-[#c6f135]">Supplements</a></li>
+                    <li><a href="sportswear-equipment.html" class="hover:text-[#c6f135]">Sportswear</a></li>
+                    <li><a href="equipment.html" class="hover:text-[#c6f135]">Equipment</a></li>
+                    <li><a href="accessories.html" class="hover:text-[#c6f135]">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-xs mb-4">Your account</h4>
+                <ul class="space-y-3 text-[#a0a5ac] text-xs">
+                    <li><a href="wishlist.html" class="hover:text-[#c6f135]">Wishlist</a></li>
+                    <li><a href="cart.html" class="hover:text-[#c6f135]">Shopping cart</a></li>
+                    <li><a href="orders.html" class="hover:text-[#c6f135]">My orders</a></li>
+                    <li><a href="profile.html" class="hover:text-[#c6f135]">My profile</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-xs mb-4">SuppZone</h4>
+                <ul class="space-y-3 text-[#a0a5ac] text-xs">
+                    <li><a href="about.html" class="hover:text-[#c6f135]">About & FAQ</a></li>
+                    <li><a href="contact.html" class="hover:text-[#c6f135]">Contact</a></li>
+                </ul>
+                <p class="text-[#747b84] text-xs mt-4">© 2026 SuppZone. University demo.</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
