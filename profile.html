@@ -11,29 +11,35 @@
     <style></style>
 </head>
 
-<body>
+<body class="min-h-screen bg-[#101214] text-white antialiased">
 
-<header>
-    <div>
-        <a href="index.html">SuppZone</a>
+<header class="relative z-40 mx-auto flex min-h-[84px] w-full max-w-[1508px] items-center justify-between gap-5 border-b border-[#30363b] bg-[#101214] px-5 py-3">
+
+    <div class="shrink-0 text-[28px] font-black tracking-tight text-white">
+        <a href="index.html" class="text-white no-underline">Supp<span class="text-[#c6f135]">Zone</span></a>
     </div>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="vitamins.html">Vitamins</a></li>
-                <li><a href="supplements.html">Supplements</a></li>
-                <li><a href="sportswear.html">Sportswear</a></li>
-                <li><a href="equipment.html">Equipment</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
+        <nav class="hidden min-w-0 flex-1 md:block">
+            <ul class="flex items-center justify-center gap-6 text-base font-semibold">
+                <li class="whitespace-nowrap"><a href="index.html" class="text-[#c6f135] no-underline">Home</a></li>
+                <li class="whitespace-nowrap"><a href="shop.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Shop</a></li>
+                <li class="whitespace-nowrap"><a href="vitamins.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Vitamins</a></li>
+                <li class="whitespace-nowrap"><a href="supplements.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Supplements</a></li>
+                <li class="whitespace-nowrap"><a href="sportswear.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Sportswear</a></li>
+                <li class="whitespace-nowrap"><a href="equipment.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Equipment</a></li>
+                <li class="whitespace-nowrap"><a href="accessories.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Accessories</a></li>
             </ul>
         </nav>
 
-        <div>
-        <a href="wishlist.html">♡ <span>0</span></a>
-        <a href="cart.html">🛒 <span>0</span></a>
-        <a href="auth.html">Account</a>
+        <div class="flex shrink-0 items-center gap-2">
+        <a href="wishlist.html" class="inline-flex min-h-[46px] items-center gap-2 rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base font-semibold text-white no-underline transition hover:border-[#c6f135]">♡ <span class="font-bold text-[#c6f135]">0</span></a>
+        <a href="cart.html" class="inline-flex min-h-[46px] items-center gap-2 rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base font-semibold text-white no-underline transition hover:border-[#c6f135]">🛒 <span class="font-bold text-[#c6f135]">0</span></a>
+        
+        <button id="theme-toggle" type="button" aria-label="Toggle theme" 
+        class="inline-flex min-h-[46px] items-center justify-center rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base text-white hover:border-[#c6f135]"> ☼
+        </button>
+        
+        <a href="auth.html" class="inline-flex min-h-[46px] items-center gap-2 rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base font-semibold text-white no-underline transition hover:border-[#c6f135]">Account</a>
 
       </div>
     </div>
