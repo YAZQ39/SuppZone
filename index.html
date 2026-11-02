@@ -48,39 +48,39 @@
 
   <main class="mx-auto flex w-full max-w-[1508px] flex-col gap-14 px-4 py-10 md:px-5">
   
-    <section>
-      <div>
-        <div>WELCOME TO SUPPZONE</div>
-        <h1>Everything for <span>your active life</span></h1>
-        <p>
+    <section class="grid items-center gap-8 rounded-3xl border border-[#30363b] bg-gradient-to-br from-[#1c2024] to-[#15191d] p-6 shadow-xl md:grid-cols-2 md:gap-10 md:p-14">
+
+      <div class="space-y-5">
+        <div class="text-xs font-extrabold tracking-[0.2em] text-[#c6f135]">WELCOME TO SUPPZONE</div>
+        <h1 class="text-4xl font-bold leading-[1.05] tracking-tight md:text-[72px]">Everything for <span class="text-[#c6f135]">your active life</span></h1>
+        <p class="max-w-xl text-base leading-7 text-[#a0a5ac] md:text-lg">
           Browse a better-organized catalog with separate collections for vitamins,
           sports nutrition, clothing and fitness essentials.
         </p>
 
-        <div>
-          <a href="shop.html">Shop Now</a>
-          <a href="#categories">Explore Categories</a>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="shop.html" class="rounded-xl bg-[#c6f135] px-5 py-3 font-bold text-[#101214] no-underline transition hover:bg-lime-300">Shop Now</a>
+          <a href="#categories" class="rounded-xl bg-[#30363b] px-5 py-3 font-bold text-white no-underline transition hover:bg-[#4a5055]">Explore Categories</a>
         </div>
       </div>
 
-      <div>
-        <img alt="Modern fitness training space" src="img\gym-equipment.jpg" />
-        <span>MOVE WITH PURPOSE</span>
+      <div class="relative h-[280px] min-h-[280px] overflow-hidden rounded-2xl bg-[#101214] md:h-[400px] md:min-h-[400px]">
+        <img alt="Modern fitness training space" src="img\gym-equipment.jpg" class="h-full min-h-[280px] w-full object-cover md:min-h-[400px]" />
+        <span class="absolute bottom-5 left-5 text-xs font-extrabold tracking-[0.18em] text-white">MOVE WITH PURPOSE</span>
       </div>
     </section>
 
-    <section id="categories">
-      <div>
+    <section id="categories" class="space-y-5">
+      <div class="flex items-end justify-between gap-4">
         <div>
-          <div>BROWSE COLLECTIONS</div>
-          <h2>Explore by category</h2>
+          <div class="mb-2 text-xs font-extrabold tracking-[0.18em] text-[#c6f135]">BROWSE COLLECTIONS</div>
+          <h2 class="text-2xl font-semibold md:text-3xl">Explore by category</h2>
         </div>
-        <span>Four clear departments</span>
       </div>
 
-      <div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-        <a href="vitamins.html">
+        <a href="vitamins.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
           <img alt="Vitamins" src="img\skincare-products.jpg" />
           <span></span>
           <span>
@@ -91,7 +91,7 @@
           </span>
         </a>
 
-        <a href="supplements.html">
+        <a href="supplements.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
           <img alt="Supplements" src="img\protein-powder.jpg" />
           <span></span>
           <span>
@@ -102,7 +102,7 @@
           </span>
         </a>
 
-        <a href="sportswear.html">
+        <a href="sportswear.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
           <img alt="Sportswear" src="img\sportswear-shirt.jpg" />
           <span></span>
           <span>
@@ -113,7 +113,7 @@
           </span>
         </a>
 
-        <a href="equipment.html">
+        <a href="equipment.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
           <img alt="Equipment" src="img\dumbbell-training.jpg" />
           <span></span>
           <span>
@@ -124,7 +124,7 @@
           </span>
         </a>
 
-        <a href="accessories.html">
+        <a href="accessories.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
           <img alt="Accessories" src="img\sports-backpack.jpg" />
           <span></span>
           <span>
