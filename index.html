@@ -13,40 +13,9 @@
 
 <body class="min-h-screen bg-[#101214] text-white antialiased">
 
-<header class="relative z-40 mx-auto flex min-h-[84px] w-full max-w-[1508px] items-center justify-between gap-5 border-b border-[#30363b] bg-[#101214] px-5 py-3">
+  <div id="site-header"></div>
 
-    <div class="shrink-0 text-[28px] font-black tracking-tight text-white">
-        <a href="index.html" class="text-white no-underline">Supp<span class="text-[#c6f135]">Zone</span></a>
-    </div>
-
-        <nav class="hidden min-w-0 flex-1 md:block">
-            <ul class="flex items-center justify-center gap-6 text-base font-semibold">
-                <li class="whitespace-nowrap"><a href="index.html" class="text-[#c6f135] no-underline">Home</a></li>
-                <li class="whitespace-nowrap"><a href="shop.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Shop</a></li>
-                <li class="whitespace-nowrap"><a href="vitamins.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Vitamins</a></li>
-                <li class="whitespace-nowrap"><a href="supplements.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Supplements</a></li>
-                <li class="whitespace-nowrap"><a href="sportswear.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Sportswear</a></li>
-                <li class="whitespace-nowrap"><a href="equipment.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Equipment</a></li>
-                <li class="whitespace-nowrap"><a href="accessories.html" class="text-[#a0a5ac] no-underline transition-colors hover:text-white">Accessories</a></li>
-            </ul>
-        </nav>
-
-        <div class="flex shrink-0 items-center gap-2">
-        <a href="wishlist.html" class="inline-flex min-h-[46px] items-center gap-2 rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base font-semibold text-white no-underline transition hover:border-[#c6f135]">♡ <span class="font-bold text-[#c6f135]">0</span></a>
-        <a href="cart.html" class="inline-flex min-h-[46px] items-center gap-2 rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base font-semibold text-white no-underline transition hover:border-[#c6f135]">🛒 <span class="font-bold text-[#c6f135]">0</span></a>
-        
-        <button id="theme-toggle" type="button" aria-label="Toggle theme" 
-        class="inline-flex min-h-[46px] items-center justify-center rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base text-white hover:border-[#c6f135]"> ☼
-        </button>
-        
-        <a href="auth.html" class="inline-flex min-h-[46px] items-center gap-2 rounded-2xl border border-[#30363b] bg-[#1c2024] px-3.5 py-2 text-base font-semibold text-white no-underline transition hover:border-[#c6f135]">Account</a>
-
-      </div>
-    </div>
-
-    </header>
-
-  <main class="mx-auto flex w-full max-w-[1508px] flex-col gap-14 px-4 py-10 md:px-5">
+  <main class="mx-auto flex w-full max-w-[1250px] flex-col gap-14 px-4 py-10 md:px-5">
   
     <section class="grid items-center gap-8 rounded-3xl border border-[#30363b] bg-gradient-to-br from-[#1c2024] to-[#15191d] p-6 shadow-xl md:grid-cols-2 md:gap-10 md:p-14">
 
@@ -81,75 +50,75 @@
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
         <a href="vitamins.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
-          <img alt="Vitamins" src="img\skincare-products.jpg" />
-          <span></span>
-          <span>
-            <small>WELLNESS</small>
-            <strong>Vitamins</strong>
-            <span>A separate, easy-to-browse collection</span>
-            <b>Explore collection &nearrow;</b>
+          <img alt="Vitamins" src="img\skincare-products.jpg" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"/>
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/5"></span>
+          <span class="relative z-10 mt-auto flex flex-col items-start gap-2 p-5">
+            <small class="text-[10px] font-extrabold tracking-[0.18em] text-[#c6f135]">WELLNESS</small>
+            <strong class="text-2xl font-bold">Vitamins</strong>
+            <span class="text-sm text-white/80">A separate, easy-to-browse collection</span>
+            <b class="mt-2 text-sm font-bold text-[#c6f135]">Explore collection ➚</b>
           </span>
         </a>
 
         <a href="supplements.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
-          <img alt="Supplements" src="img\protein-powder.jpg" />
-          <span></span>
-          <span>
-            <small>SPORTS NUTRITION</small>
-            <strong>Supplements</strong>
-            <span>Sports nutrition product examples</span>
-            <b>Explore collection &nearrow;</b>
+          <img alt="Supplements" src="img\protein-powder.jpg" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"/>
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/5"></span>
+          <span class="relative z-10 mt-auto flex flex-col items-start gap-2 p-5">
+            <small class="text-[10px] font-extrabold tracking-[0.18em] text-[#c6f135]">SPORTS NUTRITION</small>
+            <strong class="text-2xl font-bold">Supplements</strong>
+            <span class="text-sm text-white/80">Sports nutrition product examples</span>
+            <b class="mt-2 text-sm font-bold text-[#c6f135]">Explore collection ➚</b>
           </span>
         </a>
 
         <a href="sportswear.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
-          <img alt="Sportswear" src="img\sportswear-shirt.jpg" />
-          <span></span>
-          <span>
-            <small>APPAREL</small>
-            <strong>Sportswear</strong>
-            <span>Training clothes and everyday activewear</span>
-            <b>Explore collection &nearrow;</b>
+          <img alt="Sportswear" src="img\sportswear-shirt.jpg" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"/>
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/5"></span>
+          <span class="relative z-10 mt-auto flex flex-col items-start gap-2 p-5">
+            <small class="text-[10px] font-extrabold tracking-[0.18em] text-[#c6f135]">APPAREL</small>
+            <strong class="text-2xl font-bold" >Sportswear</strong>
+            <span class="text-sm text-white/80">Training clothes and everyday activewear</span>
+            <b class="mt-2 text-sm font-bold text-[#c6f135]">Explore collection ➚</b>
           </span>
         </a>
 
         <a href="equipment.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
-          <img alt="Equipment" src="img\dumbbell-training.jpg" />
-          <span></span>
-          <span>
-            <small>TRAINING GEAR</small>
-            <strong>Equipment</strong>
-            <span>Training and gym gear</span>
-            <b>Explore collection &nearrow;</b>
+          <img alt="Equipment" src="img\dumbbell-training.jpg" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"/>
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/5"></span>
+          <span class="relative z-10 mt-auto flex flex-col items-start gap-2 p-5">
+            <small class="text-[10px] font-extrabold tracking-[0.18em] text-[#c6f135]">TRAINING GEAR</small>
+            <strong class="text-2xl font-bold">Equipment</strong>
+            <span class="text-sm text-white/80">Training and gym gear</span>
+            <b class="mt-2 text-sm font-bold text-[#c6f135]">Explore collection ➚</b>
           </span>
         </a>
 
         <a href="accessories.html" class="group relative flex min-h-[345px] overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] text-white no-underline transition hover:-translate-y-1 hover:border-[#c6f135]">
-          <img alt="Accessories" src="img\sports-backpack.jpg" />
-          <span></span>
-          <span>
-            <small>ACCESSORIES</small>
-            <strong>Accessories</strong>
-            <span>Bottles, bags and daily essentials</span>
-            <b>Explore collection &nearrow;</b>
+          <img alt="Accessories" src="img\sports-backpack.jpg" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"/>
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/5"></span>
+          <span class="relative z-10 mt-auto flex flex-col items-start gap-2 p-5">
+            <small class="text-[10px] font-extrabold tracking-[0.18em] text-[#c6f135]">ACCESSORIES</small>
+            <strong class="text-2xl font-bold">Accessories</strong>
+            <span class="text-sm text-white/80">Bottles, bags and daily essentials</span>
+            <b class="mt-2 text-sm font-bold text-[#c6f135]">Explore collection ➚</b>
           </span>
         </a>
 
       </div>
     </section>
 
-    <section>
-      <div>
+    <section class="space-y-5">
+      <div class="flex items-end justify-between gap-4">
         <div>
-          <div>POPULAR PICKS</div>
-          <h2>Best sellers</h2>
+          <div class="mb-2 text-xs font-extrabold tracking-[0.18em] text-[#c6f135]">POPULAR PICKS</div>
+          <h2 class="text-2xl font-semibold md:text-3xl">Best sellers</h2>
         </div>
-        <a href="shop.html">View all</a>
+        <a href="shop.html" class="rounded-xl border border-[#30363b] px-4 py-2 text-sm font-semibold text-white no-underline transition hover:border-[#c6f135]">View all</a>
       </div>
 
-      <div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
-        <article>
+        <article  class="overflow-hidden rounded-2xl border border-[#30363b] bg-[#1c2024] transition hover:-translate-y-1 hover:border-[#647b25]">
           <div>
             <span>SALE</span>
             <img alt="Whey Protein 2kg" src="img\premium-protein-chocolate.jpg" />
@@ -357,43 +326,7 @@
 
   </main>
 
-  <footer>
-    <div>
-
-      <div>
-        <a href="index.html">Supp<span>Zone</span></a>
-        <p>
-          A complete destination for sports nutrition, supplements, and fitness essentials.
-        </p>
-      </div>
-
-      <div>
-        <h4>Explore</h4>
-        <a href="shop.html">Shop all</a>
-        <a href="vitamins.html">Vitamins</a>
-        <a href="supplements.html">Supplements</a>
-        <a href="sportswear.html">Sportswear</a>
-        <a href="equipment.html">Equipment</a>
-        <a href="accessories.html">Accessories</a>
-      </div>
-
-      <div>
-        <h4>Your account</h4>
-        <a href="wishlist.html">Wishlist</a>
-        <a href="cart.html">Shopping cart</a>
-        <a href="orders.html">My orders</a>
-        <a href="profile.html">My profile</a>
-      </div>
-
-      <div>
-        <h4>SuppZone</h4>
-        <a href="about.html">About &amp; FAQ</a>
-        <a href="contact.html">Contact</a>
-        <p>&copy; 2026 SuppZone.</p>
-      </div>
-
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
 </body>
 
