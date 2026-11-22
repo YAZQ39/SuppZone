@@ -15,11 +15,11 @@
 
 <div id="site-header" class="relative z-40"></div>
 
-    <main class="mx-auto w-full max-w-5xl px-5 py-8 sm:py-10">
+    <main class="mx-auto flex w-full max-w-[1250px] flex-col gap-14 px-4 py-10 md:px-5">
   
-        <div class="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div class="mb-0 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-                <p class="mb-2 text-[10px] font-bold tracking-[0.24em] text-[#c5f52b]">SECURE CHECKOUT</p>
+                <p class="mb-2 text-[12px] font-bold tracking-[0.25em] text-[#c5f52b]">SECURE CHECKOUT</p>
                 <h1 class="text-2xl font-black tracking-tight text-white sm:text-3xl">Complete your order</h1>
                 <p class="mt-2 text-sm text-gray-400">Review your details and get your essentials on the way.</p>
             </div>
@@ -28,80 +28,82 @@
 
         <form id="checkout-form" action="#" method="post" class="grid items-start gap-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(280px,0.85fr)]">
             <div class="space-y-4" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
-                <!-- Contact information. -->
+
                 <section aria-labelledby="contact-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
-                    <div>
-                        <span>1</span>
+                    <div class="mb-5 flex items-center gap-3">
+                        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#c5f52b]/10 text-xs font-black text-[#c5f52b]">1</span>
                         <div>
-                            <h2 id="contact-heading">Contact information</h2>
-                            <p>Where we can send your order updates.</p>
+                            <h2 id="contact-heading" class="mb-2 text-[18px] font-bold text-white">Contact information</h2>
+                            <p class="mt-0.4 text-xs text-gray-400">Where we can send your order updates.</p>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <label for="email">Email address</label>
-                            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required="">
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div class="sm:col-span-2">
+                            <label for="email" class="mb-1.5 block text-xs font-semibold text-gray-300">Email address</label>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required="" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                         </div>
                         <div>
-                            <label for="first-name">First name</label>
-                            <input id="first-name" name="first-name" type="text" autocomplete="given-name" placeholder="First name" required="">
+                            <label for="first-name" class="mb-1.5 block text-xs font-semibold text-gray-300">First name</label>
+                            <input id="first-name" name="first-name" type="text" autocomplete="given-name" placeholder="First name" required="" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                         </div>
                         <div>
-                            <label for="last-name">Last name</label>
-                            <input id="last-name" name="last-name" type="text" autocomplete="family-name" placeholder="Last name" required="">
+                            <label for="last-name" class="mb-1.5 block text-xs font-semibold text-gray-300">Last name</label>
+                            <input id="last-name" name="last-name" type="text" autocomplete="family-name" placeholder="Last name" required="" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                         </div>
-                        <div>
-                            <label for="phone">Phone number <span>(optional)</span></label>
-                            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+970 000 000 000">
+                        <div class="sm:col-span-2">
+                            <label for="phone" class="mb-1.5 block text-xs font-semibold text-gray-300">Phone number <span class="font-normal text-gray-500">(optional)</span></label>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+970 000 000 000" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                         </div>
-                    </div>
+                    </div>  
                 </section>
 
-                <!-- Shipping address. -->
                 <section aria-labelledby="shipping-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
-                    <div>
-                        <span>2</span>
+                    
+                    <div class="mb-5 flex items-center gap-3">
+                        
+                        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#c5f52b]/10 text-xs font-black text-[#c5f52b]">2</span>
                         <div>
-                            <h2 id="shipping-heading">Shipping address</h2>
-                            <p>Enter the address where you'd like your order delivered.</p>
+                            <h2 id="shipping-heading" class="text-sm font-bold text-white">Shipping address</h2>
+                            <p class="mt-0.5 text-xs text-gray-500">Enter the address where you'd like your order delivered.</p>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <label for="address">Street address</label>
-                            <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Street, building, apartment" required="">
-                        </div>
-                        
-                        <div>
-                            <label for="region">Region</label>
-                            <input id="region" name="region" type="text" autocomplete="address-level1" placeholder="Region / state">
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+
+                        <div class="sm:col-span-2">
+                            <label for="address" class="mb-1.5 block text-xs font-semibold text-gray-300">Street address</label>
+                            <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Street, building, apartment" required="" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                         </div>
 
                         <div>
-                            <label for="city">City</label>
-                            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Your city" required="">
+                            <label for="Address 2" class="mb-1.5 block text-xs font-semibold text-gray-300">Address line 2 (optional)</label>
+                            <input id="Address 2" name="Address 2" type="text" autocomplete="address-level1" placeholder="Street, building, apartment" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                         </div>
 
                         <div>
-                            <label for="postal-code">Postal code</label>
-                            <input id="postal-code" name="postal-code" type="text" autocomplete="postal-code" placeholder="Postal code">
-                        </div>
-                        
-                        <div>
-                            <label for="country">Country</label>
-                            <select id="country" name="country" autocomplete="country-name" required="">
+                            <label for="country" class="mb-1.5 block text-xs font-semibold text-gray-300">Country</label>
+                            <select id="country" name="country" autocomplete="country-name" required="" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-gray-300 placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                                 <option value="" disabled="" selected="">Select country</option>
                                 <option>Palestine</option>
                                 <option>Jordan</option>
-                                <option>United Arab Emirates</option>
                                 <option>Other</option>
                             </select>
                         </div>
 
+                        <div>
+                            <label for="postal-code" class="mb-1.5 block text-xs font-semibold text-gray-300">Postal code</label>
+                            <input id="postal-code" name="postal-code" type="text" autocomplete="postal-code" placeholder="Postal code" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
+                        </div>
+
+                        <div>
+                            <label for="city" class="mb-1.5 block text-xs font-semibold text-gray-300">City</label>
+                            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Your city" required="" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
+                        </div>
+
                     </div>
+
                 </section>
 
-                <!-- Delivery method options are visual choices for this demo page. -->
                 <section aria-labelledby="delivery-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                     <div>
                         <span>3</span>
@@ -128,7 +130,6 @@
                     </div>
                 </section> 
 
-                <!-- Payment choices are presentation only; no payment is processed. -->
                 <section aria-labelledby="payment-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                     <div>
                         <span>4</span>
