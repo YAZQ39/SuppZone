@@ -13,23 +13,23 @@
 
 <body class="min-h-screen bg-[#101214] text-white antialiased">
 
-<div id="site-header"></div>
+<div id="site-header" class="relative z-40"></div>
 
-    <main>
-        <!-- Page title and checkout progress. -->
-        <div>
+    <main class="mx-auto w-full max-w-5xl px-5 py-8 sm:py-10">
+  
+        <div class="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-                <p>SECURE CHECKOUT</p>
-                <h1>Complete your order</h1>
-                <p>Review your details and get your essentials on the way.</p>
+                <p class="mb-2 text-[10px] font-bold tracking-[0.24em] text-[#c5f52b]">SECURE CHECKOUT</p>
+                <h1 class="text-2xl font-black tracking-tight text-white sm:text-3xl">Complete your order</h1>
+                <p class="mt-2 text-sm text-gray-400">Review your details and get your essentials on the way.</p>
             </div>
-            <p><span>01</span> Information <span>/</span> 02 Review <span>/</span> 03 Confirmation</p>
+            <p class="text-xs text-gray-500"><span class="text-[#c5f52b]">01</span> Information <span class="mx-2 text-[#596064]">/</span> 02 Review <span class="mx-2 text-[#596064]">/</span> 03 Confirmation</p>
         </div>
 
-        <form id="checkout-form" action="#" method="post">
-            <div>
+        <form id="checkout-form" action="#" method="post" class="grid items-start gap-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(280px,0.85fr)]">
+            <div class="space-y-4" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                 <!-- Contact information. -->
-                <section aria-labelledby="contact-heading">
+                <section aria-labelledby="contact-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                     <div>
                         <span>1</span>
                         <div>
@@ -58,7 +58,7 @@
                 </section>
 
                 <!-- Shipping address. -->
-                <section aria-labelledby="shipping-heading">
+                <section aria-labelledby="shipping-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                     <div>
                         <span>2</span>
                         <div>
@@ -102,7 +102,7 @@
                 </section>
 
                 <!-- Delivery method options are visual choices for this demo page. -->
-                <section aria-labelledby="delivery-heading">
+                <section aria-labelledby="delivery-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                     <div>
                         <span>3</span>
                         <div>
@@ -129,7 +129,7 @@
                 </section> 
 
                 <!-- Payment choices are presentation only; no payment is processed. -->
-                <section aria-labelledby="payment-heading">
+                <section aria-labelledby="payment-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                     <div>
                         <span>4</span>
                         <div>
@@ -153,7 +153,7 @@
             </div>
 
             <!-- Order summary stays beside the form on larger screens. -->
-            <aside aria-labelledby="summary-heading">
+            <aside aria-labelledby="summary-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6 lg:sticky lg:top-5">
                 <div>
                     <h2 id="summary-heading">Order summary</h2>
                     <span><span id="item-count">0</span> items</span>
@@ -183,5 +183,3 @@
 
 </body>
 </html>
-
-
