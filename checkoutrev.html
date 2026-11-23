@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | SuppZone</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="js/app.js" type="module"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style></style>
+</head>
+
+<body class="min-h-screen bg-[#101214] text-white antialiased">
+
+<div id="site-header" class="relative z-40"></div>
+
+    <main class="mx-auto flex w-full max-w-[1250px] flex-col gap-14 px-4 py-10 md:px-5">
+
+        <div class="mb-0 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+                <p class="mb-2 text-[12px] font-bold tracking-[0.25em] text-[#c5f52b]">SECURE CHECKOUT</p>
+                <h1 class="text-2xl mb-2 text-[18px] font-black tracking-tight text-white sm:text-3xl">Review your order</h1>
+                <p class="mt-2 text-sm text-gray-400">Review your items before placing your order.</p>
+            </div>
+            <p class="text-xs text-gray-500"><span class="text-[#596064]">01</span> Information <span class="mx-2 text-[#596064]">/</span> <span class="text-[#c5f52b]">02</span> Review <span class="mx-2 text-[#596064]">/</span> 03 Confirmation</p>
+        </div>
+
+        <form id="checkout-form" action="#" method="post"
+            class="grid items-start gap-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(280px,0.85fr)]">
+
+            <section aria-labelledby="items-heading" class="space-y-4">
+                <div>
+                    <h2 id="items-heading" class="text-lg font-bold text-white">Items in your order</h2>
+                    <p class="mt-1 text-xs text-gray-400"> Check the products, quantities, and prices in your cart.</p>
+                </div>
+
+                <div id="order-items" class="space-y-4"></div>
+            </section>
+
+            <aside aria-labelledby="summary-heading" class="flex flex-col rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6 lg:sticky lg:top-5 lg:min-h-[500px]">
+                <div class="mb-5 flex items-center justify-between">
+                    <h2 id="summary-heading" class="text-lg font-bold text-white">Order summary</h2>
+                    <span class="rounded-full border border-[#363d40] px-2.5 py-1 text-[10px] font-semibold text-gray-400"><span id="item-count" class="text-[#c5f52b]">0</span> items</span>
+                </div>
+
+                <div id="order-items" class="space-y-4 border-b border-[#30373a] pb-5"></div>
+
+                <div class="space-y-3 border-b border-[#30373a] py-5 text-xs">
+                    <div class="flex justify-between text-gray-400"><span>Subtotal</span><span id="subtotal" class="text-gray-200">0 ₪</span></div>
+                    <div class="flex justify-between text-gray-400"><span>Shipping</span><span id="shipping-cost" class="text-gray-200">0 ₪</span></div>
+                    <div class="flex justify-between text-gray-400"><span>Discount</span><span id="discount" class="text-[#c5f52b]">0 ₪</span></div>
+                    <div class="flex justify-between text-gray-400"><span>Taxes</span><span class="text-gray-200">Calculated at checkout</span></div>
+                </div>
+                
+                <div class="my-4 flex gap-2">
+                <label for="discount-code" class="sr-only">Discount code</label>
+                <input id="discount-code" name="discount-code" type="text" placeholder="Discount code" class="min-w-0 flex-1 rounded-lg border border-[#363d40] bg-[#101213] px-3 py-2.5 text-xs text-white placeholder:text-gray-500 outline-none focus:border-[#c5f52b]">
+                <button id="apply-discount" type="button" class="rounded-lg border border-[#c5f52b] px-4 py-2.5 text-xs font-bold text-[#c5f52b] transition hover:bg-[#c5f52b] hover:text-[#101213]">Apply</button>
+                </div>
+                
+                <div class="mt-auto flex items-end justify-between py-5">
+                    <span class="text-sm font-bold text-white">Total</span>
+                    <span id="order-total" class="text-xl font-black text-[#c5f52b]">0 ₪</span>
+                </div>
+
+                 <a href="checkoutconf.html"class="block w-full rounded-lg bg-[#c5f52b] px-4 py-3.5 text-center text-xs font-black uppercase tracking-wide text-[#101213] no-underline transition hover:bg-[#d4ff45]">Continue to payment</a>
+                <a href="index.html" class="mt-5 flex items-center justify-center gap-2 text-xs font-semibold text-gray-400 no-underline transition hover:text-[#c5f52b]"><span aria-hidden="true">←</span> Continue shopping</a>
+                
+            </aside>
+
+        </form>
+    </main>
+
+    <div id="site-footer"></div>
+
+</body>
+</html>
