@@ -1,16 +1,6 @@
 *خطة توزيع العمل — مشروع SuppZone*
 *تحديث الحالة حسب نسخة المشروع بتاريخ 24-11-2026*
 
-*ملخص التقدم الذي ظهر في الملفات*
-• index.html فيها الصفحة الرئيسية ومحتواها الأساسي، وتم تغيير صورة قسم الإكسسوارات.
-• checkoutinfo.html فيها واجهة معلومات العميل والعنوان وطريقة الدفع. زر المتابعة يفتح checkoutrev.html، لكنه رابط عادي ولا يرسل البيانات أو يتحقق من الحقول الإلزامية.
-• checkoutrev.html فيها هيكل المراجعة: مكان لقائمة المنتجات وملخص جانبي ثابت. قائمة المنتجات فارغة، والمجاميع ما زالت 0؛ الربط بالعربة لم يكتمل.
-• checkoutconf.html ما زالت قالب صفحة فارغًا.
-• js/data_products.js بدأت بمنتج واحد p1، لكن حقول الصورة والوصف فارغة. بقية بيانات الكتالوج غير موجودة.
-• js/components_header.js وjs/components_footer.js موجودان. قائمة الهاتف غير موجودة حاليًا، وعدّادا السلة والمفضلة ثابتان على 0، وزر تغيير الثيم غير مربوط بوظيفة.
-• صفحات shop.html وvitamins.html وsupplements.html وequipment.html وaccessories.html وsportswear.html وcart.html وwishlist.html وorders.html وconfirmation.html وabout.html وcontact.html وterms.html وprivacypolicy.html ما زالت هياكل أولية.
-• js/services_storage.js وcss/styles.css فارغان، وملفات js/pages/catalog.js وjs/pages/shopping.js وjs/pages/info.js غير موجودة.
-
 *1️⃣ العضو الأول — قائد الفريق | الجهد: 5 | الحالة: جاري*
 • الصفحات: index.html، auth.html، product.html، profile.html، checkoutinfo.html، checkoutrev.html، وcheckoutconf.html.
 • الملفات: css/styles.css وjs/app.js.
@@ -54,7 +44,7 @@
 • terms.html ضمن مهام العضو 4، وprivacypolicy.html ضمن مهام العضو 5. محتوى الصفحتين ما زال فارغًا.
 • test.html يحتوي قالب بطاقة المراجعة؛ ينقل القالب إلى صفحة checkout المناسبة عند بدء الربط.
 
-*منتجان جديدان لكل عضو — الحالة: معلّق*
+*منتجان جديدان لكل عضو1 و 2 — الحالة: معلّق*
 • كل عضو يجهز صفحتي تفاصيل لمنتجين غير موجودين حاليًا، مع معرّف واسم وفئة وسعر وصورة ووصف ومواصفات.
 • يرسل كل عضو بيانات المنتجين للعضو 2 لإضافتها إلى data_products.js.
 • أسماء المنتجات وصورها لم تُحدد بعد، ولم يظهر في النسخة الحالية إلا سجل p1 واحد غير مكتمل.
