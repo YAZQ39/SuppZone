@@ -13,14 +13,126 @@
 
 <body class="min-h-screen bg-[#101214] text-white antialiased">
 
-<div id="site-header"></div>
+<div id="site-header" class="relative z-40"></div>
 
-    <main class="mx-auto flex w-full max-w-[1250px] flex-col gap-14 px-4 py-10 md:px-5">
+    <main>
 
+        <div>
+            <div>
+                <p>SECURE CHECKOUT</p>
+                <h1>Payment &amp; confirmation</h1>
+                <p>Choose how you would like to pay and complete your order.</p>
+            </div>
+            <p><span>01</span> Information <span>/</span> <span>02</span> Review <span>/</span> <span>03</span> Confirmation</p>
+        </div>
+
+        <form id="checkout-form" action="#" method="post">
+
+            <section>
+
+                <section aria-labelledby="payment-heading">
+                
+                    <div>
+                        <h2 id="payment-heading">Payment method</h2>
+                        <p>Select a payment option for your order.</p>
+                    </div>
+
+                    <div>
+
+                        <div>
+                            <input id="payment-card" type="radio" name="payment" value="card" checked>
+
+                            <label for="payment-card">
+                                <span>Credit or debit card</span>
+                                <span>VISA · MC</span>
+                            </label>
+
+                            <div>
+
+                                <div>
+                                    <label for="card-name">Name on card</label>
+                                    <input id="card-name" type="text" autocomplete="cc-name" placeholder="Name as shown on card">
+                                </div>
+
+                                <div>
+                                    <label for="card-number">
+                                        Card number
+                                    </label>
+                                    <input id="card-number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456">
+                                </div>
+
+                                <div>
+                                    <div>
+                                        <label for="card-expiry">Expiry date</label>
+                                        <input id="card-expiry" type="text" autocomplete="cc-exp" placeholder="MM / YY">
+                                    </div>
+
+                                    <div>
+                                        <label for="card-cvc">Security code</label>
+                                        <input id="card-cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="CVV">
+                                    </div>
+                                </div>
+
+                                <p>Your payment details are handled securely.</p>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <input id="payment-cash" type="radio" name="payment" value="cash">
+
+                            <label for="payment-cash">
+                                <span>Cash on delivery<span>Pay when your order arrives. No card details needed.</span></span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                    <span aria-hidden="true">●</span>
+                        Make sure your contact and delivery details are correct.
+                    </p>
+
+                </section>
+
+                <section aria-label="Order confirmation">
+
+                    <label>
+
+                        <input type="checkbox">
+                        <span>I agree to the our <a href="terms.html">Terms</a> and <a href="privacypolicy.html">Privacy Policy</a>.</span>
+                
+                    </label>
+
+                    <a href="confirmation.html">Place order</a>
+                    <a href="checkoutrev.html"><span aria-hidden="true">←</span>Back to review</a>
+            
+                </section>
+
+            </section>
+
+            <aside aria-labelledby="payment-summary-heading">
+           
+                <h2 id="payment-summary-heading">Payment summary</h2>
+
+                <p>Final amount from your reviewed order.</p>
+        
+                <div>
+
+                    <span>Total</span>
+                    <span id="order-total">0 ₪</span>
+
+                </div>
+        
+                <p>Your products and quantities are listed in the previous step.</p>
+
+            </aside>
+
+        </form>
     </main>
 
-<div id="site-footer"></div>
-
+    <div id="site-footer"></div>
 
 </body>
 </html>
