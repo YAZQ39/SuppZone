@@ -15,121 +15,157 @@
 
 <div id="site-header" class="relative z-40"></div>
 
-    <main>
+    <main class="mx-auto flex w-full max-w-[1250px] flex-col gap-14 px-4 py-10 md:px-5">
 
-        <div>
+        <div class="mb-0 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-                <p>SECURE CHECKOUT</p>
-                <h1>Payment &amp; confirmation</h1>
-                <p>Choose how you would like to pay and complete your order.</p>
+                <p class="mb-2 text-[12px] font-bold tracking-[0.25em] text-[#c5f52b]">SECURE CHECKOUT</p>
+                <h1 class="text-2xl mb-2 text-[18px] font-black tracking-tight text-white sm:text-3xl">Payment & confirmation</h1>
+                <p class="mt-2 text-sm text-gray-400">Choose how you would like to pay and complete your order.</p>
             </div>
-            <p><span>01</span> Information <span>/</span> <span>02</span> Review <span>/</span> <span>03</span> Confirmation</p>
+            <p class="text-xs text-gray-500"><span class="text-[#596064]">01</span> Information <span class="mx-2 text-[#596064]">/</span> <span class="text-[#596064]">02</span> Review <span class="mx-2 text-[#596064]">/</span> <span class="text-[#c5f52b]">03</span> Confirmation</p>
         </div>
 
-        <form id="checkout-form" action="#" method="post">
+        <form id="checkout-form" action="#" method="post"class="grid items-start gap-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(280px,0.85fr)]">
 
-            <section>
+            <section class="space-y-4">
 
-                <section aria-labelledby="payment-heading">
+                <section aria-labelledby="payment-heading" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
                 
-                    <div>
-                        <h2 id="payment-heading">Payment method</h2>
-                        <p>Select a payment option for your order.</p>
+                    <div class="mb-5">
+                        <h2 id="payment-heading" class="mb-2 text-[18px] font-bold text-white">Payment method</h2>
+                        <p class="mt-0.5 text-xs text-gray-500">Select a payment option for your order.</p>
                     </div>
 
-                    <div>
-
-                        <div>
-                            <input id="payment-card" type="radio" name="payment" value="card" checked>
-
-                            <label for="payment-card">
-                                <span>Credit or debit card</span>
-                                <span>VISA · MC</span>
+                    <div class="space-y-2.5">
+                    
+                        <div class="relative">
+                            <input id="payment-card" type="radio" name="payment" value="card" checked class="peer absolute left-4 top-6 h-5 w-5 accent-[#c5f52b]">
+                    
+                            <label for="payment-card"class="flex min-h-[63px] cursor-pointer items-center rounded-lg border border-[#363d40] bg-[#101213] py-3.5 pl-12 pr-4 transition peer-checked:border-[#c5f52b] peer-focus-visible:ring-2 peer-focus-visible:ring-[#c5f52b]">
+                                <span class="text-xs font-bold text-white"> Credit or debit card </span>
+                                <span class="ml-auto text-[10px] font-bold tracking-wide text-gray-500"> VISA · MC </span>
                             </label>
-
-                            <div>
-
+                    
+                            <div class="mt-3 hidden space-y-4 rounded-lg border border-[#30373a] bg-[#101213] p-4 peer-checked:block">
+                    
                                 <div>
-                                    <label for="card-name">Name on card</label>
-                                    <input id="card-name" type="text" autocomplete="cc-name" placeholder="Name as shown on card">
+                                    <label for="card-name" class="mb-1.5 block text-xs font-semibold text-gray-300"> Name on card </label>
+                                    <input id="card-name" type="text" autocomplete="cc-name" placeholder="Name as shown on card" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                                 </div>
-
+                    
                                 <div>
-                                    <label for="card-number">
-                                        Card number
-                                    </label>
-                                    <input id="card-number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456">
+                                    <label for="card-number" class="mb-1.5 block text-xs font-semibold text-gray-300"> Card number </label>
+                                    <input id="card-number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                                 </div>
-
-                                <div>
-                                    <div>
-                                        <label for="card-expiry">Expiry date</label>
-                                        <input id="card-expiry" type="text" autocomplete="cc-exp" placeholder="MM / YY">
-                                    </div>
+                    
+                                <div class="grid gap-4 sm:grid-cols-2">
 
                                     <div>
-                                        <label for="card-cvc">Security code</label>
-                                        <input id="card-cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="CVV">
+                                        <label for="card-expiry" class="mb-1.5 block text-xs font-semibold text-gray-300"> Expiry date </label>
+                                        <input id="card-expiry" type="text" autocomplete="cc-exp" placeholder="MM / YY" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
+                                    </div>
+                    
+                                    <div>
+                                        <label for="card-cvc" class="mb-1.5 block text-xs font-semibold text-gray-300"> Security code </label>
+                                        <input id="card-cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="CVV" class="w-full rounded-lg border border-[#363d40] bg-[#101213] px-3.5 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-[#c5f52b]">
                                     </div>
                                 </div>
-
-                                <p>Your payment details are handled securely.</p>
+                    
+                                <p class="border-t border-[#30373a] pt-3 text-[11px] leading-relaxed text-gray-500"> Your payment details are handled securely.</p>
+                            
                             </div>
+
                         </div>
-
-                        <div>
-
-                            <input id="payment-cash" type="radio" name="payment" value="cash">
-
-                            <label for="payment-cash">
-                                <span>Cash on delivery<span>Pay when your order arrives. No card details needed.</span></span>
+                    
+                        <div class="relative">
+                            <input id="payment-cash" type="radio" name="payment" value="cash" class="peer absolute left-4 top-6 h-5 w-5 accent-[#c5f52b]">
+                    
+                            <label for="payment-cash" class="flex min-h-[63px] cursor-pointer items-center rounded-lg border border-[#363d40] bg-[#101213] py-3.5 pl-12 pr-4 transition peer-checked:border-[#c5f52b] peer-focus-visible:ring-2 peer-focus-visible:ring-[#c5f52b]">
+                               
+                                <span class="text-xs font-bold text-white"> Cash on delivery
+                                    <span class="mt-1 block text-[11px] font-normal leading-relaxed text-gray-500"> Pay when your order arrives. No card details needed.</span>
+                               </span>
+                            
                             </label>
-
+                        
                         </div>
-
+                    
                     </div>
 
-                    <p>
-                    <span aria-hidden="true">●</span>
-                        Make sure your contact and delivery details are correct.
-                    </p>
+                    <p class="mt-4 flex items-start gap-2 text-[11px] leading-relaxed text-gray-500">
+                    <span aria-hidden="true" class="text-[#c5f52b]">●</span> Make sure your contact and delivery details are correct.</p>
 
                 </section>
 
-                <section aria-label="Order confirmation">
+                <section aria-label="Order confirmation" class="rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
 
-                    <label>
+                    <label class="flex cursor-pointer items-start gap-3 text-xs leading-relaxed text-gray-300">
 
-                        <input type="checkbox">
-                        <span>I agree to the our <a href="terms.html">Terms</a> and <a href="privacypolicy.html">Privacy Policy</a>.</span>
+                        <input type="checkbox" class="mt-0.5 h-4 w-4 shrink-0 accent-[#c5f52b]">
+                        <span>I agree to the our <a href="terms.html" class="text-[#c5f52b] underline">Terms</a> and <a href="privacypolicy.html" class="text-[#c5f52b] underline">Privacy Policy</a>.</span>
                 
                     </label>
 
-                    <a href="confirmation.html">Place order</a>
-                    <a href="checkoutrev.html"><span aria-hidden="true">←</span>Back to review</a>
+                    <a href="confirmation.html" class="mt-5 block w-full rounded-lg bg-[#c5f52b] px-4 py-3.5 text-center text-xs font-black uppercase tracking-wide text-[#101213] no-underline transition hover:bg-[#d4ff45]">Place order</a>
+                    <a href="checkoutrev.html" class="mt-5 flex items-center justify-center gap-2 text-xs font-semibold text-gray-400 no-underline transition hover:text-[#c5f52b]"><span aria-hidden="true">←</span>Back to review</a>
             
                 </section>
 
             </section>
 
-            <aside aria-labelledby="payment-summary-heading">
-           
-                <h2 id="payment-summary-heading">Payment summary</h2>
+            <aside class="lg:sticky lg:top-6 lg:self-start">
+                <section class="flex flex-col rounded-xl border border-[#30373a] bg-[#1b1f21] p-5 sm:p-6">
+            
+                    <div class="mb-5 flex items-center justify-between">
+                        <div>
+                            <h2 class="text-lg font-bold text-white">Order summary</h2>
+                            <p class="mt-1 text-sm text-gray-400">Your order details</p>
+                        </div>
+            
+                        <span class="rounded-full border border-[#363d40] px-3 py-1 text-xs text-gray-400">
+                            <span id="item-count" class="text-[#c5f52b]">0</span> items
+                        </span>
+                    </div>
+            
+                    <div class="space-y-4 border-y border-[#30373a] py-5">
+                        <div id="order-items" class="space-y-4"></div>
+                    </div>
+            
+                    <div class="space-y-3 border-b border-[#30373a] py-5">
 
-                <p>Final amount from your reviewed order.</p>
-        
-                <div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-400">Subtotal</span>
+                            <span class="text-white">0 ₪</span>
+                        </div>
+            
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-400">Shipping</span>
+                            <span class="text-white">0 ₪</span>
+                        </div>
+            
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-400">Discount</span>
+                            <span class="text-[#c5f52b]">0 ₪</span>
+                        </div>
 
-                    <span>Total</span>
-                    <span id="order-total">0 ₪</span>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-400">Taxes</span>
+                            <span class="text-gray-400">0 ₪</span>
+                        </div>
 
-                </div>
-        
-                <p>Your products and quantities are listed in the previous step.</p>
-
+                    </div>
+            
+                    <div class="mt-auto flex items-end justify-between py-5">
+                        <span class="text-sm font-bold text-white">Total</span>
+                        <span id="order-total" class="text-xl font-black text-[#c5f52b]">0 ₪</span>
+                    </div>
+            
+                </section>
             </aside>
 
         </form>
+        
     </main>
 
     <div id="site-footer"></div>
