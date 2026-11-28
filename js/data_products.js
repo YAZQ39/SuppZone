@@ -1,6 +1,5 @@
 export const products = [
     //0 vitamins
-
 {
     "id": "s0p001",
     "name": "",
