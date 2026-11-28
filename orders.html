@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>My Orders | SuppZone</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="css/styles.css" rel="stylesheet"/>
     <script src="js/app.js" type="module"></script>
@@ -16,7 +16,23 @@
 <div id="site-header"></div>
 
     <main class="mx-auto flex w-full max-w-[1250px] flex-col gap-14 px-4 py-10 md:px-5">
+        <div>
+            <h1>My Orders</h1>
+            <p>View and track your previous orders</p>
+        </div>
+        <section>
+            <h2>Order History</h2>
+            <div id="orders-list">
+            </div>
+        </section>
 
+        <section>
+            <div id="empty-orders">
+                <h2>No Orders Yet</h2>
+                <p>You haven't placed any orders yet.</p>
+                <a href="shop.html">Start Shopping</a>
+            </div>
+        </section>
     </main>
 
 <div id="site-footer"></div>
