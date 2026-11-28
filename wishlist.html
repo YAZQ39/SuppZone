@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Wishlist</title>
     <link href="css/styles.css" rel="stylesheet"/>
     <script src="js/app.js" type="module"></script>
     <style></style>
@@ -16,7 +17,26 @@
 <div id="site-header"></div>
 
     <main class="mx-auto flex w-full max-w-[1250px] flex-col gap-14 px-4 py-10 md:px-5">
+        <div>
+            <h1>My Wishlist</h1>
+            <p>Your favorite products in one place</p>
+        </div>
 
+        <section>
+            <h2>Wishlist Items</h2>
+            <div id="wishlist-items">
+            </div>
+        </section>
+
+        <section>
+            <div id="empty-wishlist">
+                <h2>Empty Wishlist</h2>
+                <p>Your wishlist is empty.</p>
+                <a href="shop.html">Continue Shopping</a>
+            </div>
+        </section>
+
+        
     </main>
 
 <div id="site-footer"></div>
