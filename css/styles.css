@@ -56,13 +56,12 @@ html[data-theme="light"] #site-header .header-action:hover {
 
 /* Home page styles */
 
-html[data-theme="light"] body.home-page {
+html[data-theme="light"] body{
   background-color: #bfd6eb;
 }
 
 html[data-theme="light"] .welcome {
   color: #c6f135;
-  font-weight: 600;
   text-shadow: 0 1px 2px rgb(20 27 33 / 50%);
 }
 
@@ -96,11 +95,11 @@ html[data-theme="light"] .home a[href="shop.html"] {
 }
 
 html[data-theme="light"] .home a[href="shop.html"]:hover {
-  background-color: #d4f65b;
+  background-color: #e7edf3;
 }
 
-html[data-theme="light"] .home img {
-  border-color: #dce3ea;
+html[data-theme="light"] .home-image {
+  border: 1px solid #dce3ea;
   box-shadow: 0 8px 24px -8px rgb(26 54 82 / 50%);
 }
 
@@ -109,7 +108,7 @@ html[data-theme="light"] .home img {
 html[data-theme="light"] .clarification {
   color: #c6f135;
   font-weight: 800;
-  text-shadow: 0 1px 2px rgb(20 27 33 / 55%);
+  text-shadow: 0 1px 2px rgb(20 27 33 / 50%);
 }
 
 html[data-theme="light"] #categories h2 {
@@ -128,52 +127,71 @@ html[data-theme="light"] #categories a.group:hover {
 
 /* products section styles */
 
-html[data-theme="light"] #best-sellers {
+html[data-theme="light"] #products-card {
   --seller-text: #141b21;
   --seller-border: #dce3ea;
   color: var(--seller-text);
 }
 
-html[data-theme="light"] #best-sellers article {
+html[data-theme="light"] #products-card a.view-all {
+  background-color: rgba(225, 231, 220, 0.541);
+  border-color: #c6d0d9;
+  color: #141b21;
+  box-shadow: 0 2px 4px rgb(26 54 82 / 20%);
+}
+
+html[data-theme="light"] #products-card a.view-all:hover {
+  background-color: #e7edf3;
+  border-color: #c6f135;
+}
+
+html[data-theme="light"] #products-card article {
   background-color: #e2f1fc;
   border-color: var(--seller-border);
   box-shadow: 0 8px 20px -8px rgb(26 54 82 / 50%);
 }
 
-html[data-theme="light"] #best-sellers article > div:first-child {
+html[data-theme="light"] #products-card article > div:first-child {
   background-color: #f5f6f7;
 }
 
-html[data-theme="light"] #best-sellers article > div + div {
+html[data-theme="light"] #products-card article > div + div {
   border-top-color: var(--seller-border);
 }
 
-html[data-theme="light"] #best-sellers article :is(h3 a, strong) {
+html[data-theme="light"] #products-card article :is(h3 a, strong) {
   color: var(--seller-text);
 }
 
-html[data-theme="light"] #best-sellers a[href="shop.html"],
-html[data-theme="light"] #best-sellers article button.border {
+html[data-theme="light"] #products-card article h3 a:hover {
+  color: #c6f135;
+  text-shadow: 0 1px 2px rgb(20 27 33 / 45%);
+}
+
+html[data-theme="light"] #products-card a[href="shop.html"],
+html[data-theme="light"] #products-card article button.border {
   border-color: var(--seller-border);
   color: var(--seller-text);
 }
 
-html[data-theme="light"] #best-sellers button[aria-label="Add to wishlist"] {
+html[data-theme="light"] #products-card button[aria-label="Add to wishlist"] {
   background-color: #f4f6f5;
   box-shadow: 0 2px 8px rgb(20 27 33 / 30%);
 }
 
-html[data-theme="light"] #best-sellers article:hover,
-html[data-theme="light"] #best-sellers a[href="shop.html"]:hover,
-html[data-theme="light"] #best-sellers article button.border:hover {
+html[data-theme="light"] #products-card article:hover,
+html[data-theme="light"] #products-card a[href="shop.html"]:hover,
+html[data-theme="light"] #products-card article button.border:hover {
   border-color: #c6f135;
 }
 
 /* Newsletter */
+
 html[data-theme="light"] #home-newsletter {
-  background-color: #f1f4f1;
+  background-color: #e2f1fc;
   border-color: #dce3ea;
   color: #141b21;
+  box-shadow: 0 8px 24px -8px rgb(26 54 82 / 50%);
 }
 
 html[data-theme="light"] #home-newsletter p {
@@ -195,6 +213,7 @@ html[data-theme="light"] #home-newsletter input[type="email"]:focus {
 }
 
 /* Footer */
+
 html[data-theme="light"] #site-footer footer {
   background-color: #A1C6E5;
   border-top-color: #dce3ea;
